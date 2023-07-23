@@ -1,4 +1,4 @@
-package com.example.flight.entities;
+package com.example.flightbooking.entities;
 
 import com.example.flightbooking.entities.AbstractEntity;
 
