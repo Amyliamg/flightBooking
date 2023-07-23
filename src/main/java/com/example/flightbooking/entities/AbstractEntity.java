@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public class AbstractEntity {  // for the id in user entity
+public class AbstractEntity {  // every entity will have one id, so I dont need to overwrite them
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
