@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /*background-color: #152945;*/
+    background-size: cover;
+    background-image: url("Animated Shape.svg");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 800px;
+    padding: 24px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.content-table {
+    border-collapse: collapse;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Add a blue text color to links */
+a {
+    color: dodgerblue;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #f1f1f1;
+}
+
+tr:not(:first-child):hover {background-color: #dddddd;}
+
+table {
+    width: 100%;
+}
+
+th {
+    background-color: rgb(20, 58, 99, 0.8);
+    color: white;
+}
+
+.flight {
+    border-left: 0;
+}
+
+.icon {
+    border-right: 0;
+    padding-right: 0;
+}

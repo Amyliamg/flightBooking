@@ -1,0 +1,11 @@
+USE RESERVATION;
+insert into FLIGHT values(1,'AA1','American','LAX','NYC',STR_TO_DATE('10-05-2023', '%m-%d-%Y'),'2023-10-05 03:14:07');
+insert into FLIGHT values(2,'AA2','American','LAX','NYC',STR_TO_DATE('10-05-2023', '%m-%d-%Y'),'2023-10-05 05:14:07');
+insert into FLIGHT values(3,'AA3','American','LAX', 'NYC',STR_TO_DATE('10-05-2023', '%m-%d-%Y'),'2023-10-05 06:14:07');
+insert into FLIGHT values(4,'AS1','Alaska','LAX', 'NYC',STR_TO_DATE('10-05-2023', '%m-%d-%Y'),'2023-10-05 07:14:07');
+insert into FLIGHT values(5,'UA1','United','NYC', 'SFO',STR_TO_DATE('10-05-2023', '%m-%d-%Y'),'2023-10-05 10:14:07');
+insert into FLIGHT values(6,'UA1','United','NYC', 'SFO',STR_TO_DATE('10-05-2023', '%m-%d-%Y'),'2023-10-05 10:14:07');
+insert into FLIGHT values(7,'AS1','Alaska','LAX', 'NYC',STR_TO_DATE('10-06-2023', '%m-%d-%Y'),'2023-10-06 07:14:07');
+insert into FLIGHT values(8,'AS2','Alaska','LAX', 'NYC',STR_TO_DATE('10-06-2023', '%m-%d-%Y'),'2023-10-06 08:14:07');
+insert into FLIGHT values(9,'AS3','Alaska','NYC', 'SFO',STR_TO_DATE('10-06-2023', '%m-%d-%Y'),'2023-10-06 10:14:07');
+insert into FLIGHT values(10,'UA1','United','NYC', 'SFO',STR_TO_DATE('10-06-2023', '%m-%d-%Y'),'2023-10-06 10:14:07');
