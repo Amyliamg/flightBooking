@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Find Flight</title>
-  <p>Find Flight</p>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Find Flights</title>
+  <link rel="stylesheet" href="findFlights.css">
 </head>
 <body>
+<form action="findFlights" method="post">
+  <div class="container">
+    <h1>Find Flights</h1>
+    <hr>
+    <label for="from"><b>From</b></label>
+    <input type="text" name="from" id="from"/>
 
+    <label for="to"><b>To</b></label>
+    <input type="text" name="to" id="to"/>
+
+    <label for="departure"><b>Date</b></label>
+    <input type="text" name="departureDate" id="departure"/>
+
+    <input type="submit" class="submitbtn" value="search"/>
+  </div>
+</form>
 </body>
 </html>

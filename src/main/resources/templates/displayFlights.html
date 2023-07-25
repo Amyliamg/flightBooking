@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Flights</title>
+  <link rel="stylesheet" href="displayFlights.css">
+</head>
+<body>
+<div class="container">
+  <h1>Flights</h1>
+  <hr>
+  <table class="content-table">
+    <tr>
+      <th colspan="2">Airlines</th>
+      <th>Departure City</th>
+      <th>Arrival City</th>
+      <th>Departure Time</th>
+      <th>Action</th>
+    </tr>
+
+    <!--        The following are for testing CSS format-->
+    <!--        <tr>-->
+    <!--            <td class="icon"><img src="airlines/American.webp" height="30" alt=""/></td>-->
+    <!--            <td class="flight">American</td>-->
+    <!--            <td>LAX</td>-->
+    <!--            <td>NYC</td>-->
+    <!--            <td>2023-10-05 03:14:07</td>-->
+    <!--            <td><a href="#">Select</a></td>-->
+    <!--        </tr>-->
+
+    <!--        <tr>-->
+    <!--            <td class="icon"><img src="airlines/Alaska.webp" height="30" alt=""/></td>-->
+    <!--            <td class="flight">Alaska</td>-->
+    <!--            <td>LAX</td>-->
+    <!--            <td>NYC</td>-->
+    <!--            <td>2023-10-05 03:14:07</td>-->
+    <!--            <td><a href="#">Select</a></td>-->
+    <!--        </tr>-->
+
+    <!--        <tr>-->
+    <!--            <td class="icon"><img src="airlines/Spirit.webp" height="30" alt=""/></td>-->
+    <!--            <td class="flight">Spirit</td>-->
+    <!--            <td>LAX</td>-->
+    <!--            <td>NYC</td>-->
+    <!--            <td>2023-10-05 03:14:07</td>-->
+    <!--            <td><a href="#">Select</a></td>-->
+    <!--        </tr>-->
+
+    <tr th:each="flight:${flights}">
+      <td class="icon"><img th:src="@{'airlines/'+${flight.operatingAirlines}+'.webp'}" height="30" alt=""/></td>
+      <td class="flight" th:text="${flight.operatingAirlines}"></td>
+      <td th:text="${flight.departureCity}"></td>
+      <td th:text="${flight.arrivalCity}"></td>
+      <td th:text="${flight.estimatedDepartureTime}"></td>
+      <td><a th:href="@{'showCompleteReservation?flightId='+${flight.id}}">Select</a></td>
+    </tr>
+
+  </table>
+</div>
+</body>
+</html>
