@@ -13,27 +13,23 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
-@Table(name = "FLIGHT")  // which table it points to
+@Table(name = "FLIGHT")
 public class Flight extends AbstractEntity {
-    //@Column(name = "FLIGHT_NUMBER") if can not find the flight number in the dataset
-    private String flightNumber; // camo case, but in the sql, we will use the snake case
+    private String flightNumber;
     private String operatingAirlines;
     private String departureCity;
     private String arrivalCity;
     private Timestamp estimatedDepartureTime;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd") //format the data
-    @Temporal(TemporalType.DATE) // 我只对template里面的date 感兴趣
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Temporal(TemporalType.DATE)
     private Date dateOfDeparture;
 
-    // comment + n 自动生成getter and setter
-
-
-    public String getFlightNumber() { //只读
+    public String getFlightNumber() {
         return flightNumber;
     }
 
-    public void setFlightNumber(String flightNumber) { //只写，对外不透明的
+    public void setFlightNumber(String flightNumber) {
         this.flightNumber = flightNumber;
     }
 

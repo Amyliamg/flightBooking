@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Complete Reservation</title>
+    <link rel="stylesheet" href="completeReservation.css">
+</head>
+<body>
+
+<form action="completeReservation" method="post">
+    <div class="container">
+        <h1>Complete Reservation</h1>
+        <p>Please fill in this form to complete your reservation.</p>
+        <hr>
+
+        <table class="content-table">
+            <tr>
+                <th colspan="2">Airlines</th>
+                <th>Departure City</th>
+                <th>Arrival City</th>
+                <th>Departure Time</th>
+            </tr>
+<!--            <tr>-->
+<!--                <td class="icon"><img src="airlines/American.webp" height="30" alt=""/></td>-->
+<!--                <td class="flight">American</td>-->
+<!--                <td>LAX</td>-->
+<!--                <td>NYC</td>-->
+<!--                <td>2023-10-05 03:14:07</td>-->
+<!--            </tr>-->
+            <tr>
+                <td class="icon"><img th:src="@{'airlines/'+${flight.operatingAirlines}+'.webp'}" height="30" alt=""/></td>
+                <td class="flight" th:text="${flight.operatingAirlines}"></td>
+                <td th:text="${flight.departureCity}"></td>
+                <td th:text="${flight.arrivalCity}"></td>
+                <td th:text="${flight.estimatedDepartureTime}"></td>
+            </tr>
+        </table>
+
+        <br>
+        <h2>Passenger Details</h2>
+        <table class="input-table">
+            <tr>
+                <td class="input-table-td">
+                    <label for="firstname"><b>First Name</b></label>
+                    <input type="text" name="passengerFirstName" id="firstname"/>
+                </td>
+                <td class="input-table-td">
+                    <label for="lastname"><b>Last Name</b></label>
+                    <input type="text" name="passengerLastName" id="lastname"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="input-table-td">
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" name="passengerEmail" id="email"/>
+                </td>
+                <td class="input-table-td">
+                    <label for="phone"><b>Phone</b></label>
+                    <input type="text" name="passengerPhone" id="phone"/>
+                </td>
+            </tr>
+        </table>
+
+        <input type="hidden" name="flightId" th:value="${flight.id}"/>
+
+        <input type="submit" class="submitbtn" value="Confirm"/>
+    </div>
+</form>
+
+</body>
+</html>
