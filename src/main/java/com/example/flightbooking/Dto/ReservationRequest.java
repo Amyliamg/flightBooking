@@ -1,5 +1,5 @@
 package com.example.flightbooking.Dto;
-
+// data transfer class
 public class ReservationRequest {
     private Long flightId;
     private String passengerFirstName;
