@@ -15,7 +15,6 @@ public class Reservation extends AbstractEntity{
     private Passenger passenger;
 
     private Boolean checkedIn;
-    private Integer numberOfBags;
 
     public Flight getFlight() {
         return flight;
@@ -41,11 +40,5 @@ public class Reservation extends AbstractEntity{
         this.checkedIn = checkedIn;
     }
 
-    public Integer getNumberOfBags() {
-        return numberOfBags;
-    }
 
-    public void setNumberOfBags(Integer numberOfBags) {
-        this.numberOfBags = numberOfBags;
-    }
 }
