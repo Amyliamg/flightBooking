@@ -5,7 +5,9 @@ import com.example.flightbooking.Dto.ReservationUpdateRequest;
 import com.example.flightbooking.entities.Reservation;
 import com.example.flightbooking.repos.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.*;
+
 
 @RestController
 //@CrossOriginv
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class ReservationRestController {
     @Autowired
     private ReservationRepository reservationRepository;
+
 
     @RequestMapping("/reservations/{id}") // this api could be used by other services
     public Reservation findReservation(@PathVariable Long id) {

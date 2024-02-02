@@ -24,7 +24,6 @@ public class FlightController {
     @Autowired
     private FlightRepository flightRepository;
 
-    @CachePut(value = "flights", key = "#from + '_' + #to + '_' + #departureDate")
     @RequestMapping(value = "findFlights", method = RequestMethod.POST)
     public String findFlights(
             @RequestParam("from") String from,
