@@ -66,15 +66,7 @@ public class ReservationController {
         String msg = "Reservation " + reservation.getId() + " is confirmed. " +
                 "Please check in your flight in advance to save some time on your travel date.";
         modelMap.addAttribute("msg", msg);
-        // Generate itinerary and send a confirmation email
-        String cwd = System.getProperty("user.dir"); // in the root create a pdf.    .getProperty("user.dir") = get current work directory
-        String filePath = cwd + "/reservation.pdf";
-        pdfGenerator.generatePDF(reservation, filePath);
-        emailUtil.sendEmail(passenger.getEmail(), "Flight Booked!", msg, filePath);
 
-        // Remove the temporary pdf file after we sending to the user
-        File pdfFile = new File(filePath);
-        pdfFile.delete();
 
 
         return "reservationConfirmation";

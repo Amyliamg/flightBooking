@@ -26,7 +26,6 @@ public class ReservationRestController {
             return null;
         }
 
-        reservation.setNumberOfBags(request.getNumberOfBags());
         reservation.setCheckedIn(request.isCheckedIn());
         return reservationRepository.save(reservation);
     }
