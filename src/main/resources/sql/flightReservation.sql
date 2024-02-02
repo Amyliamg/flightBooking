@@ -43,7 +43,7 @@ CREATE TABLE reservation(
                             CREATED TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 
                             CHECKED_IN TINYINT(1),
-                            NUMBER_OF_BAGS INT,
+
 
                             PRIMARY KEY (ID),
                             FOREIGN KEY (FLIGHT_ID) REFERENCES flight(ID) ON DELETE CASCADE,

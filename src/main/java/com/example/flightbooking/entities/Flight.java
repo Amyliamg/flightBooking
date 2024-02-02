@@ -9,12 +9,16 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
 @Table(name = "FLIGHT")
-public class Flight extends AbstractEntity {
+public class Flight extends AbstractEntity implements Serializable {
+
+    private static final long serialVersionUID = -4439114469417994311L;
+
     private String flightNumber;
     private String operatingAirlines;
     private String departureCity;
