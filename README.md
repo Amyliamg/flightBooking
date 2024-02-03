@@ -24,7 +24,15 @@ The Flight Booking Project is a Spring Boot application that allows users to sea
 To run the application, use the following command:
 1. `cd FlightBookingApplication`
 2. `mvn spring-boot:run`
+
 To run Redis, use `redis-server`
+
+To use Docker
+1. Install Docker: https://docs.docker.com/engine/install/
+2. Navigate to the directory where Dockerfile is located: `cd Dockerfile`
+3. Build the Docker image using the following command:  `docker build -t flight-app .`
+4. Run the Docker container with this command: `docker run -p 8081:8081 flight-app`
+
  
 ##  Features
 Flight search based on departure, arrival, and date
