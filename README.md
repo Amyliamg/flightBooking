@@ -41,15 +41,15 @@ Flight check-in service
 Email confirmation
  
 ## Technologies Used
-Spring Boot
-Spring Data JPA
-Thymeleaf
-Spring Web
-Spring DevTools
-MySQL Connector Java
-Spring Data Redis
-Spring Boot Test
-Spring Boot Mail
-iTextPDF
-Docker
+- Spring Boot
+- Spring Data JPA
+- Thymeleaf
+- Spring Web
+- Spring DevTools
+- MySQL Connector Java
+- Spring Data Redis
+- Spring Boot Test
+- Spring Boot Mail
+- iTextPDF
+- Docker
 ......
